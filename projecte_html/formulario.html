@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari de selecció</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Formulari de selecció de treballadors</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Tornar a l'inici</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="formulari-container">
+            <h2>Nou treballador</h2>
+            <form action="https://alumnat.cat/form" method="POST" enctype="multipart/form-data" class="formulari">
+                <div class="formulari-camp">
+                    <label for="nom">Nom:</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="formulari-camp">
+                    <label for="cognoms">Cognoms:</label>
+                    <input type="text" id="cognoms" name="cognoms" required>
+                </div>
+                <div class="formulari-camp">
+                    <label for="edat">Edat:</label>
+                    <input type="number" id="edat" name="edat" min="18" max="99" required>
+                </div>
+                <div class="formulari-camp">
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Z]{1}" title="Format: 8 números i una lletra majúscula" required>
+                </div>
+                <div class="formulari-camp">
+                    <label for="color">Color preferit:</label>
+                    <input type="color" id="color" name="color">
+                </div>
+                <div class="formulari-camp">
+                    <label for="mail">Mail:</label>
+                    <input type="email" id="mail" name="mail" required>
+                </div>
+                <div class="formulari-camp">
+                    <label for="estudis">Estudis:</label>
+                    <select id="estudis" name="estudis" required>
+                        <option value="ESO">ESO</option>
+                        <option value="Batxillerat">Batxillerat</option>
+                        <option value="CFGM">CFGM</option>
+                        <option value="CFGS">CFGS</option>
+                        <option value="Universitat">Universitat</option>
+                    </select>
+                </div>
+                <fieldset class="formulari-camp">
+                    <legend>Sexe:</legend>
+                    <label><input type="radio" name="sexe" value="home" required> Home</label>
+                    <label><input type="radio" name="sexe" value="dona" required> Dona</label>
+                    <label><input type="radio" name="sexe" value="altre" required> Altre</label>
+                </fieldset>
+                <div class="formulari-camp">
+                    <label for="explicacio">Explicació:</label>
+                    <textarea id="explicacio" name="explicacio" rows="4" required></textarea>
+                </div>
+                <div class="formulari-camp">
+                    <label>
+                        <input type="checkbox" name="privacitat" required>
+                        Accepto la política de privacitat
+                    </label>
+                </div>
+                <div class="formulari-camp">
+                    <label for="foto">Fotografia:</label>
+                    <input type="file" id="foto" name="foto" accept="image/*" required>
+                </div>
+                <div class="formulari-camp">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Ibai Gavilà</p>
+    </footer>
+</body>
+</html>
